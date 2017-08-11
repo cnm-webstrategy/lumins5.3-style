@@ -1,0 +1,71 @@
+{
+	"layouts": [
+		{
+			"columns": [[
+				{"portletId": "36"}	
+					]],
+			"friendlyURL": "/home",
+			"layoutTemplateId": "1_column",
+			"name": "Dashboard",
+			"title": "Dashboard",
+			"layouts": []
+		},
+		{
+			"friendlyURL": "/mailbox",
+			"layoutTemplateId": "1_column",
+			"name": "Mailbox",
+			"title": "Mailbox",
+			"columns": [ ["page_mailbox.html"]],
+			"hidden":"true"
+		},
+		{
+			"columns": [[ "page_contact.html"	]],
+			"friendlyURL": "/contacts",
+			"layoutTemplateId": "1_column",
+			"name": "Contacts",
+			"title": "Contacts",
+			"hidden":"true"
+		},
+		{
+			"columns": [[	"page_profile.html"	]],
+			"friendlyURL": "/Profile",
+			"layoutTemplateId": "1_column",
+			"name": "Profile",
+			"title": "Profile",
+			"hidden":"true"
+		},
+		{
+			"columns": [				
+				[		
+					{"portletId": "33"}						
+				]
+			],
+			"friendlyURL": "/Blog",
+			"layoutTemplateId": "1_column",
+			"name": "Blog",
+			"title": "Blog"	
+		},
+		{
+			"columns": [				
+				[		
+					"page_basic_gallery.html"					
+				]
+			],
+			"friendlyURL": "/basic_gallery",
+			"layoutTemplateId": "1_column",
+			"name": "Lightbox Gallery",
+			"title": "Lightbox Gallery"	
+		},
+		{
+			"columns": [				
+				[		
+					"page_carousel.html"					
+				]
+			],
+			"friendlyURL": "/carousel",
+			"layoutTemplateId": "1_column",
+			"name": "Bootstrap Carusela",
+			"title": "Bootstrap Carusela"	
+		}
+	]
+}

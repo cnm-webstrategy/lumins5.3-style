@@ -1,0 +1,239 @@
+.aui {
+  /*#1ab394 --> #23c6c8*/ }
+  .aui body.skin-4.mini-navbar .nav-header {
+    background-color: #23c6c8; }
+  .aui body.skin-4 {
+    /*skin-4*/
+    color: #565758 !important;
+    background-color: #ededed;
+    /* ellucian lpv-2963 */
+    /* end ellucian lpv-2963 */ }
+    .aui body.skin-4 .minimalize-styl-2 {
+      margin: 14px 5px 5px 25px; }
+    .aui body.skin-4 .navbar-top-links li:last-child {
+      margin-right: 25px; }
+    .aui body.skin-4 .spin-icon {
+      background: #23c6c8 !important; }
+    .aui body.skin-4 .nav-header {
+      background: #23c6c8;
+      background: url("../patterns/header-profile-skin-4.png");
+      background-size: cover; }
+    .aui body.skin-4 .breadcrumb {
+      background: transparent; }
+    .aui body.skin-4 .page-heading {
+      border: none;
+      background: rgba(255, 255, 255, 0.7); }
+    .aui body.skin-4 .nav > li.active {
+      background: #e0e0e0; }
+    .aui body.skin-4 .logo-element {
+      padding: 17px 0; }
+    .aui body.skin-4 .nav > li > a,
+    .aui body.skin-4 .welcome-message {
+      color: #edf6ff; }
+    .aui body.skin-4 .portlet-blogs .nav > li > a,
+    .aui body.skin-4 .portlet-message-boards .nav > li > a,
+    .aui body.skin-4 .portlet-wiki .nav > li > a {
+      color: #555; }
+    .aui body.skin-4 .portlet-blogs .nav > li > a:focus, .aui body.skin-4 .portlet-blogs .nav > li > a:hover,
+    .aui body.skin-4 .portlet-message-boards .nav > li > a:focus, .aui body.skin-4 .portlet-message-boards .nav > li > a:hover,
+    .aui body.skin-4 .portlet-wiki .nav > li > a:focus, .aui body.skin-4 .portlet-wiki .nav > li > a:hover {
+      color: #007763; }
+    .aui body.skin-4 .nav > li > a i {
+      color: #ccc; }
+    .aui body.skin-4 #top-search::-moz-placeholder {
+      color: #edf6ff;
+      opacity: 0.5; }
+    .aui body.skin-4 #side-menu > li > a,
+    .aui body.skin-4 .nav.nav-second-level > li > a {
+      color: #586b7d; }
+    .aui body.skin-4 .nav > li.active > a {
+      color: #213a53; }
+    .aui body.skin-4 .navbar-minimalize {
+      background: #23c6c8;
+      border-color: #23c6c8; }
+    .aui body.skin-4 .border-bottom {
+      border-bottom: none !important; }
+    .aui body.skin-4 #top-search {
+      color: #fff; }
+    .aui body.skin-4 .navbar-static-top {
+      background: #213a53; }
+    .aui body.skin-4 .nav-header {
+      padding: 30px 25px 30px 25px; }
+    .aui body.skin-4 .dashboard-header {
+      background: rgba(255, 255, 255, 0.4);
+      border-bottom: none !important;
+      border-top: none;
+      padding: 20px 30px 20px 30px; }
+    .aui body.skin-4 .wrapper-content {
+      padding: 30px 15px; }
+    .aui body.skin-4 .dashoard-1 .wrapper-content {
+      padding: 0px 30px 25px 30px; }
+    .aui body.skin-4 .ibox-title {
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      margin-bottom: 1px; }
+    .aui body.skin-4 .ibox-content {
+      background: rgba(255, 255, 255, 0.4);
+      border: none !important; }
+    .aui body.skin-4 #page-wrapper {
+      background: #f6f6f6;
+      background: -webkit-radial-gradient(center, ellipse cover, #f6f6f6 20%, #d5d5d5 100%);
+      background: -o-radial-gradient(center, ellipse cover, #f6f6f6 20%, #d5d5d5 100%);
+      background: -ms-radial-gradient(center, ellipse cover, #f6f6f6 20%, #d5d5d5 100%);
+      background: radial-gradient(ellipse at center, #f6f6f6 20%, #d5d5d5 100%);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f6f6f6, endColorstr=#d5d5d5)"; }
+    .aui body.skin-4 .ibox-title,
+    .aui body.skin-4 .ibox-content {
+      border-width: 1px; }
+    .aui body.skin-4 .ibox-content:last-child {
+      border-style: solid solid solid solid; }
+    .aui body.skin-4 .nav > li.active {
+      border: none; }
+    .aui body.skin-4 .nav-header a.dropdown-toggle {
+      color: #edf6ff;
+      margin-top: 10px; }
+    .aui body.skin-4 .nav-header a.dropdown-toggle .text-muted {
+      color: #edf6ff;
+      opacity: 0.8; }
+    .aui body.skin-4 .img-circle {
+      border-radius: 10px; }
+    .aui body.skin-4 .nav.navbar-top-links > li > a:hover,
+    .aui body.skin-4 .nav.navbar-top-links > li > a:focus {
+      background: #1a2d41; }
+    .aui body.skin-4 .navbar-default .nav > li > a:hover,
+    .aui body.skin-4 .navbar-default .nav > li > a:focus {
+      background: #e0e0e0;
+      color: #213a53; }
+    .aui body.skin-4 .nav.nav-tabs > li.active > a {
+      color: #555; }
+    .aui body.skin-4 .nav.nav-tabs > li.active {
+      background: transparent; }
+    .aui body.skin-4 .portlet-topper .portlet-topper-toolbar .portlet-icon-back {
+      background: url(/LP5-ellucian-theme/css/../images/arrows/11_left.png) no-repeat 0 50%;
+      /* ellucian LPV-2962 */
+      background-position: left !important;
+      color: #707070; }
+    .aui body.skin-4 .navbar-default .landing_link a {
+      background: #23c6c8; }
+    .aui body.skin-4 .navbar-default .special_link a {
+      background: #23c6c8; }
+    .aui body.skin-4 .navbar-default .special_link a span.label {
+      color: #23c6c8; }
+    .aui body.skin-4 .navbar-default .landing_link a:hover {
+      background: #23c6c8 !important; }
+    .aui body.skin-4 .top-navigation .navbar-nav .dropdown-menu > .active > a {
+      color: #23c6c8; }
+    .aui body.skin-4 .top-navigation .nav > li a:hover, .aui body.skin-4 .top-navigation .nav > li a:focus {
+      color: #23c6c8; }
+    .aui body.skin-4 .top-navigation .nav > li.active > a {
+      color: #23c6c8; }
+    .aui body.skin-4 .top-navigation .navbar-brand {
+      background: #23c6c8; }
+    .aui body.skin-4 .navbar-toggle {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .btn-primary.btn-outline {
+      color: #23c6c8; }
+    .aui body.skin-4 .btn-primary {
+      background-color: #23c6c8;
+      border-color: #23c6c8; }
+    .aui body.skin-4 .btn-link:hover, .aui body.skin-4 .btn-link:focus, .aui body.skin-4 .btn-link:active, .aui body.skin-4 .btn-link.active, .aui body.skin-4 .open .dropdown-toggle.btn-link {
+      color: #23c6c8; }
+    .aui body.skin-4 .label-primary, .aui body.skin-4 .badge-primary {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .onoffswitch-label {
+      border: 2px solid #23c6c8; }
+    .aui body.skin-4 .onoffswitch-inner:before {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .onoffswitch-switch {
+      border: 2px solid #23c6c8; }
+    .aui body.skin-4 .fc-state-active {
+      background-color: #23c6c8;
+      border-color: #23c6c8; }
+    .aui body.skin-4 .fc-event, .aui body.skin-4 .fc-agenda .fc-event-time, .aui body.skin-4 .fc-event a {
+      background-color: #23c6c8;
+      border-color: #23c6c8; }
+    .aui body.skin-4 a.list-group-item.active, .aui body.skin-4 a.list-group-item.active:hover, .aui body.skin-4 a.list-group-item.active:focus {
+      background-color: #23c6c8;
+      border-color: #23c6c8; }
+    .aui body.skin-4 .pace .pace-progress {
+      background: #23c6c8; }
+    .aui body.skin-4 .form-control:focus, .aui body.skin-4 .single-line:focus {
+      border-color: #23c6c8 !important; }
+    .aui body.skin-4 .has-success .form-control {
+      border-color: #23c6c8; }
+    .aui body.skin-4 .has-success .control-label {
+      color: #23c6c8; }
+    .aui body.skin-4 .noUi-connect {
+      background: none repeat scroll 0 0 #23c6c8; }
+    .aui body.skin-4 .onoffswitch-label {
+      border: 2px solid #23c6c8; }
+    .aui body.skin-4 .onoffswitch-inner:before {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .onoffswitch-switch {
+      border: 2px solid #23c6c8; }
+    .aui body.skin-4 .toast {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .toast-success {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .inspinia-notify.alert-info {
+      border-left: 6px solid #23c6c8; }
+    .aui body.skin-4 .forum-item.active .fa {
+      color: #23c6c8; }
+    .aui body.skin-4 .forum-item.active a.forum-item-title {
+      color: #23c6c8; }
+    .aui body.skin-4 .vertical-date small {
+      color: #23c6c8; }
+    .aui body.skin-4 .branding {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .navy-bg {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .panel-primary {
+      border-color: #23c6c8; }
+    .aui body.skin-4 .panel-primary > .panel-heading {
+      background-color: #23c6c8;
+      border-color: #23c6c8; }
+    .aui body.skin-4 .progress-bar {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .text-navy {
+      color: #23c6c8; }
+    .aui body.skin-4 .category-list li a .text-navy {
+      color: #23c6c8; }
+    .aui body.skin-4 .faq-question {
+      color: #23c6c8; }
+    .aui body.skin-4 .issue-tracker .btn-link {
+      color: #23c6c8; }
+    .aui body.skin-4 .agile-list li.success-element {
+      border-left: 3px solid #23c6c8; }
+    .aui body.skin-4 .open-small-chat {
+      background: #23c6c8; }
+    .aui body.skin-4 .open-small-chat:hover {
+      background: #23c6c8; }
+    .aui body.skin-4 .small-chat-box .content .chat-message.active {
+      background: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-rotating-plane.sk-spinner {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-double-bounce .sk-double-bounce1, .aui body.skin-4 .sk-spinner-double-bounce .sk-double-bounce2 {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-wave div {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-wandering-cubes .sk-cube1, .aui body.skin-4 .sk-spinner-wandering-cubes .sk-cube2 {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-pulse.sk-spinner {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-chasing-dots .sk-dot1, .aui body.skin-4 .sk-spinner-chasing-dots .sk-dot2 {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-three-bounce div {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-circle .sk-circle:before {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-cube-grid .sk-cube {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-wordpress.sk-spinner {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .sk-spinner-fading-circle .sk-circle:before {
+      background-color: #23c6c8; }
+    .aui body.skin-4 .spin-icon {
+      background: #23c6c8; }
+    .aui body.skin-4 .default-skin {
+      background: #23c6c8; }
+

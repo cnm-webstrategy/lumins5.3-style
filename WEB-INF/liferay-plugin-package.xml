@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin-package PUBLIC "-//Liferay//DTD Plugin Package 6.2.0//EN" "http://www.liferay.com/dtd/liferay-plugin-package_6_2_0.dtd">
+
+<plugin-package>
+	<name><![CDATA[LP5-ellucian]]> Theme</name>
+	<module-id>Ellucian/LP5-ellucian-theme/6.2.10.2/war</module-id>
+	<recommended-deployment-context>LP5-ellucian-theme</recommended-deployment-context>
+	<required-deployment-contexts>
+		<required-deployment-context>resources-importer-web</required-deployment-context>
+		<required-deployment-context>web-form-portlet</required-deployment-context>
+	</required-deployment-contexts>
+	<types>
+		<type>theme</type>
+	</types>
+	<tags></tags>
+	<short-description><![CDATA[]]></short-description>
+	<long-description><![CDATA[]]></long-description>
+	<change-log><![CDATA[]]></change-log>
+	<page-url>http://www.ellucian.com</page-url>
+	<author><![CDATA[Ellucian.]]></author>
+	<licenses>
+		<license osi-approved="true">LGPL</license>
+	</licenses>
+	<liferay-versions>
+		<liferay-version>6.2.0+</liferay-version>
+		<liferay-version>6.2.10+</liferay-version>
+	</liferay-versions>
+</plugin-package>

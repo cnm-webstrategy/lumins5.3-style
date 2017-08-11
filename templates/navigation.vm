@@ -1,0 +1,57 @@
+<nav class="$nav_css_class" id="navigation" role="navigation">
+	<ul aria-label="#language ("site-pages")" role="menubar">
+		#foreach ($nav_item in $nav_items)
+			#set ($nav_item_attr_has_popup="")
+			#set ($nav_item_attr_selected="")
+			#set ($nav_item_css_class = "")
+
+			#if ($nav_item.isSelected())
+				#set ($nav_item_attr_selected="aria-selected='true'")
+				#set ($nav_item_css_class = "active")
+			#end
+
+			#if ($nav_item.hasChildren())
+				#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+			#end
+
+			<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+               	#if (!$nav_item.hasChildren())
+	                <a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem">
+	                	<i class="fa fa-th-large"></i> <span class="nav-label">$nav_item.getName()</span>
+	            	</a>
+            	#else
+            		<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()">
+            			<i class="fa fa-th-large"></i> <span class="nav-label">$nav_item.getName()</span> 
+            			<span class="fa arrow"></span>
+        			</a>
+                    <ul class="nav nav-second-level">
+                    	#foreach ($nav_child in $nav_item.getChildren())
+                    		#set ($second_item_class = "")
+                    		#if ($nav_child.isSelected())
+                    			#set ($second_item_class = "active")
+                			#end
+							<li class="$second_item_class">
+								#if (!$nav_child.hasChildren())
+									<a href="$nav_child.getURL()">$nav_child.getName()</a>
+								#else
+									<a href="$nav_child.getURL()">$nav_child.getName()<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										#foreach ($third_child in $nav_child.getChildren())
+											#if ($third_child.isSelected())                                
+			                                    <li class="active">
+		                                    #else
+		                                    	<li>
+	                                    	#end
+		                                        <a href="$third_child.getURL()">$third_child.getName()</a>
+		                                    </li>
+	                                    #end
+                                    </ul>
+                                #end
+							</li>
+                    	#end
+                    </ul>
+            	#end
+            </li>				
+		#end
+	</ul>
+</nav>

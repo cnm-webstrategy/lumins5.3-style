@@ -1,0 +1,40 @@
+
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.profile-left-header-menu, null, "$locale", $theme_display))
+ #set ($nav-header-profile-menu = $journalContentUtil.getContent($group_id, $theme_settings.profile-left-header-menu, null, "$locale", $theme_display))
+#else
+ #set ($nav-header-profile-menu = $theme_settings.profile-left-header-menu)
+#end
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.top-header, null, "$locale", $theme_display))
+ #set ($top-header = $journalContentUtil.getContent($group_id, $theme_settings.top-header, null, "$locale", $theme_display))
+#else
+ #set ($top-header = $theme_settings.top-header)
+#end
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.right-sidebar-toggle, null, "$locale", $theme_display))
+ #set ($right-sidebar-toggle = $journalContentUtil.getContent($group_id, $theme_settings.right-sidebar-toggle, null, "$locale", $theme_display))
+#else
+ #set ($right-sidebar-toggle = $theme_settings.right-sidebar-toggle)
+#end
+
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.footer, null, "$locale", $theme_display))
+ #set ($footer = $journalContentUtil.getContent($group_id, $theme_settings.footer, null, "$locale", $theme_display))
+#else
+ #set ($footer = $theme_settings.footer)
+#end
+
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.small-chat-box, null, "$locale", $theme_display))
+ #set ($small-chat-box = $journalContentUtil.getContent($group_id, $theme_settings.small-chat-box, null, "$locale", $theme_display))
+#else
+ #set ($small-chat-box = $theme_settings.small-chat-box)
+#end
+
+#set ($site_default_url = $propsUtil.get("company.default.home.url") )
+
+#set ( $logo_tool_tip_idx = $site_default_url.indexOf( '/',1 )+1 )
+#set ( $logo_tool_tip = $site_default_url.substring( $logo_tool_tip_idx ) )
+
+#set ($sign_out_url = "javascript:luminisLogout(escape(' $themeDisplay.getURLSignOut()'))")

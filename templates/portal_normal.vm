@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+#parse ($init)
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+		<head>
+		<title>$the_title - $company_name</title>
+		<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+		$theme.include($top_head_include)
+		
+		#set($current = $portalUtil.getCurrentCompleteURL($request)) 
+		#if(!$current.contains('/email_template_'))		
+			<link href="$themeDisplay.getPathThemeRoot()/css/bootstrap.css" rel="stylesheet" />
+		    <link href="$themeDisplay.getPathThemeRoot()/font-awesome/css/font-awesome.css" rel="stylesheet" />
+			
+			<!-- Toastr style -->
+		    <link href="$themeDisplay.getPathThemeRoot()/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+		
+		    <!-- Gritter -->
+		    <link href="$themeDisplay.getPathThemeRoot()/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+		    
+		    <link href="$themeDisplay.getPathThemeRoot()/css/animate.css" rel="stylesheet" />
+		    <link href="$themeDisplay.getPathThemeRoot()/css/style.css" rel="stylesheet" />
+		    <link href="$themeDisplay.getPathThemeRoot()/css/custom.css" rel="stylesheet" />
+			<link href="$themeDisplay.getPathThemeRoot()/css/plugins/iCheck/custom.css" rel="stylesheet" />
+			 
+			<!-- Mainly scripts -->
+			<script src="$themeDisplay.getPathThemeRoot()/js/jquery-2.1.1.js"></script>
+			<script src="$themeDisplay.getPathThemeRoot()/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+			<script src="$themeDisplay.getPathThemeRoot()/js/bootstrap.min.js"></script>
+			<script src="$themeDisplay.getPathThemeRoot()/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+			<script src="$themeDisplay.getPathThemeRoot()/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+			<script src="$themeDisplay.getPathThemeRoot()/js/custom.js"></script>
+		#else
+			<link href="$themeDisplay.getPathThemeRoot()/css/email_style.css" rel="stylesheet" />
+		#end
+	</head>
+	
+	#if($theme_settings.hide-chat-portlet == true)
+		#set($css_class = $css_class +" hide-chat")
+	#end
+	
+	#if($theme_settings.no-left-menu == true)
+		#set($css_class = $css_class +" top-navigation")
+	#end
+		
+	#if($theme_settings.use-full-height == true)
+    	#set($css_class = $css_class + " fixed-sidebar full-height-layout")
+     #end
+     
+     #if($theme_settings.use-navbar-closed == true)
+    	#set($css_class = $css_class + " canvas-menu")
+     #end
+  
+  	#if($theme_settings.locked-page == true)
+-		#set($css_class = $css_class +" gray-bg locked-page")
+-	#end
+
+	<body class="$css_class">		
+		#if(!$current.contains('/email_template_') && $theme_settings.locked-page == false)
+			<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+			$theme.include($body_top_include)
+			
+			<div id="wrapper">
+				
+				#if($theme_settings.no-left-menu == false)
+					#parse ("$full_templates_path/side_bar.vm")
+				#end
+				
+				#if($theme_settings.right-sidebar-fixed == true)
+					<div id="page-wrapper" class="gray-bg sidebar-content">
+				#else
+					<div id="page-wrapper" class="gray-bg">			
+				#end
+				
+					#if($theme_settings.no-left-menu == false)
+						#parse ("$full_templates_path/top_header.vm")
+					#else
+						#parse ("$full_templates_path/top_navigation.vm")
+					#end
+					
+					#if ($selectable)
+						$theme.include($content_include)
+					#else
+						$portletDisplay.recycle()
+			
+						$portletDisplay.setTitle($the_title)
+			
+						$theme.wrapPortlet("portlet.vm", $content_include)
+					#end
+				
+					#parse ("$full_templates_path/footer.vm")
+				</div>
+				
+				
+				#if($theme_settings.display-small-chat-box == true)
+					$small-chat-box
+				#end
+				
+				#if($theme_settings.display-right-sidebar-toggle == true)
+					$right-sidebar-toggle
+				#end
+			</div>
+			
+			<!-- Custom and plugin javascript -->
+			<script src="$themeDisplay.getPathThemeRoot()/js/inspinia.js"></script>
+			<script src="$themeDisplay.getPathThemeRoot()/js/plugins/pace/pace.min.js"></script>
+			
+			<!-- Peity -->
+		    <script src="$themeDisplay.getPathThemeRoot()/js/plugins/peity/jquery.peity.min.js"></script>
+		    <script src="$themeDisplay.getPathThemeRoot()/js/demo/peity-demo.js"></script>
+		    
+			<!-- iCheck -->
+	    	<script src="$themeDisplay.getPathThemeRoot()/js/plugins/iCheck/icheck.min.js"></script>
+	    	
+	    	<!-- jQuery UI custom -->
+			<script src="$themeDisplay.getPathThemeRoot()/js/jquery-ui.custom.min.js"></script>
+			
+		#else
+			#if ($selectable)
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
+	
+				$portletDisplay.setTitle($the_title)
+	
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end
+		#end
+		
+		#parse ("$full_templates_path/settings.vm")
+		#parse ("$full_templates_path/liferay_settings.vm")
+		
+		$theme.include($body_bottom_include)
+		$theme.include($bottom_include)
+	</body>
+</html>

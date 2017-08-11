@@ -1,0 +1,156 @@
+#set ($paramid = $portalUtil.getOriginalServletRequest($request).getParameter('p_p_mode'))
+
+#if($paramid != "view")
+	#if($theme_settings.collapse-menu == true)
+		<script>
+	        $("body").addClass('mini-navbar');
+	        SmoothlyMenu();
+	
+	        if (localStorageSupport) {
+	            localStorage.setItem("collapse_menu",'on');
+	        }
+		</script>
+	#else
+		<script>
+	        $("body").removeClass('mini-navbar');
+	        SmoothlyMenu();
+	
+	        if (localStorageSupport) {
+	            localStorage.setItem("collapse_menu",'off');
+	        }
+		</script>       
+	#end
+	
+	
+	#if($theme_settings.fixed-sidebar == true)
+		<script>
+	        $("body").addClass('fixed-sidebar');
+	        $('.sidebar-collapse').slimScroll({
+	            height: '100%',
+	            railOpacity: 0.9
+	        });
+	
+	        if (localStorageSupport) {
+	            localStorage.setItem("fixedsidebar",'on');
+	        } 
+		</script>
+	#else
+		<script>
+			$('.sidebar-collapse').attr('style', '');
+			$("body").removeClass('fixed-sidebar');
+			
+			if (localStorageSupport) {
+			    localStorage.setItem("fixedsidebar",'off');
+			}
+		</script>       
+	#end
+	
+	#if($theme_settings.top-navbar == true)
+		<script>
+			$(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
+			$("body").removeClass('boxed-layout');
+			$("body").addClass('fixed-nav');
+			
+			if (localStorageSupport) {
+			    localStorage.setItem("boxedlayout",'off');
+			}
+			
+			if (localStorageSupport) {
+			    localStorage.setItem("fixednavbar",'on');
+			}
+		</script>
+	#else
+		<script>
+		   	$(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+			$("body").removeClass('fixed-nav');
+		
+		    if (localStorageSupport) {
+		        localStorage.setItem("fixednavbar",'off');
+		    }
+		</script>       
+	#end
+	
+	#if($theme_settings.boxed-layout == true)
+		<script>
+		    $("body").addClass('boxed-layout');
+		    $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+		    $("body").removeClass('fixed-nav');
+		    $(".footer").removeClass('fixed');
+		
+		    if (localStorageSupport) {
+		        localStorage.setItem("fixednavbar",'off');
+		    }
+		
+		    if (localStorageSupport) {
+		        localStorage.setItem("fixedfooter",'off');
+		    }
+	
+	        if (localStorageSupport) {
+	            localStorage.setItem("boxedlayout",'on');
+	        }
+		</script>
+	#else
+		<script>
+	    	$("body").removeClass('boxed-layout');
+	
+	        if (localStorageSupport) {
+	            localStorage.setItem("boxedlayout",'off');
+	        }
+		</script>       
+	#end
+	
+	#if($theme_settings.fixed-footer == true)
+		<script>
+		    $("body").removeClass('boxed-layout');
+		    $(".footer").addClass('fixed');
+		
+		    if (localStorageSupport) {
+		        localStorage.setItem("boxedlayout",'off');
+		    }
+		
+		    if (localStorageSupport) {
+		        localStorage.setItem("fixedfooter",'on');
+		    }
+		</script>
+	#else
+		<script>
+	        $(".footer").removeClass('fixed');
+	
+	        if (localStorageSupport) {
+	            localStorage.setItem("fixedfooter",'off');
+	        }
+		</script>       
+	#end
+	    
+	
+	<script>
+		try{
+		    if (localStorageSupport) {
+		        var collapse = localStorage.getItem("collapse_menu");
+		        var fixedsidebar = localStorage.getItem("fixedsidebar");
+		        var fixednavbar = localStorage.getItem("fixednavbar");
+		        var boxedlayout = localStorage.getItem("boxedlayout");
+		        var fixedfooter = localStorage.getItem("fixedfooter");
+		
+		        if (collapse == 'on') {
+		            $('#collapsemenu').prop('checked','checked')
+		        }
+		        if (fixedsidebar == 'on') {
+		            $('#fixedsidebar').prop('checked','checked')
+		        }
+		        if (fixednavbar == 'on') {
+		            $('#fixednavbar').prop('checked','checked')
+		        }
+		        if (boxedlayout == 'on') {
+		            $('#boxedlayout').prop('checked','checked')
+		        }
+		        if (fixedfooter == 'on') {
+		            $('#fixedfooter').prop('checked','checked')
+		        }
+		    }
+	    }catch(exception){
+	    	console.log(exception);
+	    }
+	    
+	</script>
+#end

@@ -1,0 +1,7 @@
+# ignore everything except certain css files 
+*
+!css
+css/*
+!css/cnm.css
+!css/custom.css
+!.gitignore

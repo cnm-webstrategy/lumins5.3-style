@@ -32,4 +32,5 @@
     </c:if>
 
     <%@ include file="/html/portlet/dockbar/view_user_account.jspf" %>
+
 </aui:nav>

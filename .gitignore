@@ -1,1 +1,9 @@
-node_modules/*
+.idea
+*
+!.gitignore
+!Gulpfile.js
+!package.json
+!LP5-ellucian-theme/
+!LP5-ellucian-theme/*
+LP5-ellucian-theme/node_modules/*
+!luminis/custom_liferay_jsps/html/portlet/dockbar/view_user_panel.jspf

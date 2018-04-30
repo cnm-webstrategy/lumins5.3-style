@@ -13,9 +13,7 @@
 @import url(color_schemes/ultra.css);
 @import url(color_schemes/yellow.css);
 @import url(color_schemes/purple.css);
-@import url(color_schemes/cnm.css);
-/* @import url(custom_rtl.css);*/
-
+@import url(color_schemes/cnm.css);
 
 
 #wrapper{padding:0}

@@ -1,0 +1,72 @@
+<div class="row border-bottom white-bg">
+	#if ($is_signed_in)	#dockbar()#end
+			
+	<nav class="navbar navbar-static-top " role="navigation" id="top-navigation">
+	    <div class="navbar-header">
+	        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+	            <i class="fa fa-reorder"></i>
+	        </button>
+	        <a href="#" class="navbar-brand">$site_name</a>
+	    </div>
+	    <div class="navbar-collapse collapse navbar-top-navigation top-navigation-ul" id="navbar">
+	        <ul class="nav navbar-nav">
+	        	
+	            #foreach ($nav_item in $nav_items)
+					#set ($nav_item_attr_has_popup="")
+					#set ($nav_item_attr_selected="")
+					#set ($nav_item_css_class = "")
+	
+					#if ($nav_item.isSelected())
+						#set ($nav_item_attr_selected="aria-selected='true'")
+						#set ($nav_item_css_class = "active")
+					#end
+					
+					#if (!$nav_item.hasChildren())
+						<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+							<a aria-expanded="false" role="button" aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() >
+								<span class="nav-label">$nav_item.getName()</span>
+							</a>
+						</li>
+					#else
+						<li class="$nav_item_css_class dropdown" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+							<a aria-labelledby="layout_$nav_item.getLayoutId()" $nav_item_attr_has_popup $nav_item.getTarget() aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="nav-label">$nav_item.getName()</span>
+								<span class="caret"></span>
+							</a>                
+							<ul role="menu" class="dropdown-menu">
+								#foreach ($nav_child in $nav_item.getChildren())
+									
+									<li >
+										#if (!$nav_child.hasChildren())
+											<a href="$nav_child.getURL()" >
+												$nav_child.getName()
+											</a>
+										#else
+											<a href="$nav_child.getURL()" >
+												$nav_child.getName()
+												<span class="fa arrow"></span>
+											</a>
+											<ul class="nav nav-third-level">
+												#foreach ($nav_child3 in $nav_child.getChildren())
+													<li><a href="$nav_child3.getURL()">$nav_child3.getName()</a></li>
+												#end
+											</ul>
+										#end
+									</li>
+								#end
+							</ul>
+						</li>
+				 	#end				
+				#end
+	        </ul>
+	        
+	        <ul class="nav navbar-top-links navbar-right">
+	            #if (!$is_signed_in)
+					<li><a data-redirect="false" href="$sign_in_url" rel="nofollow" id="sign-in">$sign_in_text</a></li>
+				#else
+	                <li><a data-redirect="false" href="$sign_out_url" rel="nofollow" class="sign-out-link"><i class="fa fa-sign-out" ></i> $sign_out_text </a> </li>
+	            #end
+	        </ul>
+	    </div>
+	</nav>
+</div>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN"
+        "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+    <compatibility>
+        <version>6.2.0+</version>
+    </compatibility>
+    <theme id="LP5-ellucian" name="LP5-ellucian">
+        <settings>
+            <setting configurable="true" key="pages-icon" options="Default,Upload Icon,Custom Field" type="select"
+                     value="Default"></setting>
+            <setting configurable="false" key="profile-left-header-menu" type="text" value="NAV_HEADER"></setting>
+            <setting configurable="false" key="footer" type="text" value="FOOTER"></setting>
+            <setting configurable="true" key="right-sidebar-fixed" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="white-top-header" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="no-left-menu" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="use-navbar-closed" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="locked-page" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="hide-chat-portlet" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="display-small-chat-box" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="small-chat-box" type="text" value="SMALL_CHAT_BOX"></setting>
+            <setting configurable="true" key="login-page" type="text" value=""></setting>
+            <setting configurable="true" key="show-language-choice" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="collapse-menu" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="fixed-sidebar" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="top-navbar" type="checkbox" value="true"></setting>
+            <setting configurable="true" key="boxed-layout" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="fixed-footer" type="checkbox" value="false"></setting>
+            <setting configurable="true" key="show-settings-box" type="checkbox" value="true"></setting>
+        </settings>
+        <color-scheme id="06" name="cnm">
+            <css-class>skin-6</css-class>
+            <color-scheme-images-path>${images-path}/color_schemes/skin-cnm</color-scheme-images-path>
+        </color-scheme>
+
+        <color-scheme id="05" name="Green">
+            <css-class>skin-0</css-class>
+            <color-scheme-images-path>${images-path}/color_schemes/skin-default</color-scheme-images-path>
+        </color-scheme>
+        <color-scheme id="02" name="BLUE LIGHT">
+            <css-class>skin-2</css-class>
+            <color-scheme-images-path>${images-path}/color_schemes/skin-blue</color-scheme-images-path>
+        </color-scheme>
+        <color-scheme id="03" name="YELLOW">
+            <css-class>skin-3</css-class>
+            <color-scheme-images-path>${images-path}/color_schemes/skin-yellow</color-scheme-images-path>
+        </color-scheme>
+        <color-scheme id="04" name="Ultra">
+            <css-class>skin-4</css-class>
+            <color-scheme-images-path>${images-path}/color_schemes/skin-ultra</color-scheme-images-path>
+        </color-scheme>
+        <color-scheme id="01" name="Purple-Ellucian">
+            <css-class>skin-5</css-class>
+            <color-scheme-images-path>${images-path}/color_schemes/skin-purple</color-scheme-images-path>
+        </color-scheme>
+        <layout-templates>
+            <custom>
+                <layout-template id="full_height" name="full_height">
+                    <template-path>/layouttpl/custom/full_height/full_height.tpl</template-path>
+                    <wap-template-path>/layouttpl/custom/full_height/full_height.tpl</wap-template-path>
+                    <thumbnail-path>/layouttpl/custom/full_height/full_height.png</thumbnail-path>
+                </layout-template>
+            </custom>
+        </layout-templates>
+    </theme>
+</look-and-feel>

@@ -1,0 +1,131 @@
+ <nav class="navbar-default navbar-static-side" role="navigation" id="top-navigation">
+  	<div class="" id="slimScroll">
+    	<div class="sidebar-collapse"> 
+    		
+    		<div class="navbar-closed">
+		    	#if($theme_settings.use-navbar-closed == true)
+			    	<a class="close-canvas-menu"><i class="fa fa-times"></i></a>
+			    #end
+    		</div>
+    		  
+	        <ul class="nav" id="side-menu">
+	        	#if ($is_signed_in)
+	               <li class="nav-header">
+	                   <span class="clear">
+	                       <a href="$site_default_url" title="#language("go-to") $logo_tool_tip">
+	                          <img id="siteLogo" alt="$logo_tool_tip" src="$site_logo" />
+	                       </a>
+	                   </span>
+	               </li>
+	            #end
+	            
+	            #foreach ($nav_item in $nav_items)
+					#set ($nav_item_attr_has_popup="")
+					#set ($nav_item_attr_selected="")
+					#set ($nav_item_css_class = "")
+	
+					#if ($nav_item.isSelected())
+						#set ($nav_item_attr_selected="aria-selected='true'")
+						#set ($nav_item_css_class = "active")
+					#end
+					
+					<li class="$nav_item_css_class item$velocityCount" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+						<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem">
+							#if($theme_settings.pages-icon == "Upload Icon")
+								$nav_item.icon()
+							#elseif ($theme_settings.pages-icon == "Custom Field")
+								#if ($nav_item.getLayout().getExpandoBridge().hasAttribute("icon") == true)
+									$nav_item.getLayout().getExpandoBridge().getAttribute("icon")
+								#end
+							#else
+								<i class='icon-item$velocityCount'></i>
+							#end
+						
+							<span class="nav-label menu-name">$nav_item.getName()</span>
+							
+						#if (!$nav_item.hasChildren())
+							</a>
+						#else
+							<span class="fa arrow"></span>
+						</a>
+							<ul class="nav nav-second-level">
+								#foreach ($nav_child in $nav_item.getChildren())
+									#set ($nav_child_css_class = "")
+									#if ($nav_child.isSelected())
+										#set ($nav_child_css_class = "active")
+									#end
+									<li class="$nav_child_css_class">
+										#if (!$nav_child.hasChildren())
+											<a href="$nav_child.getURL()" >
+												$nav_child.getName()
+											</a>
+										#else
+											<a href="$nav_child.getURL()" >
+												$nav_child.getName()
+												<span class="fa arrow"></span>
+											</a>
+											<ul class="nav nav-third-level">
+												#foreach ($nav_child3 in $nav_child.getChildren())
+													<li><a href="$nav_child3.getURL()">$nav_child3.getName()</a></li>
+												#end
+											</ul>
+										#end
+									</li>
+								#end
+							</ul>
+					 	#end
+					</li>
+				#end
+	        </ul>
+    	</div>
+    	<div id="slimScrollBar"></div>
+    	<div id="slimScrollRail"></div>
+	</div>
+</nav>
+
+<script type="text/javascript">
+
+    var hdr_full_logo = "$site_logo";
+    var hdr_mini_logo = "$images_folder/company_logo.png";
+
+    $(document).ready(function(){
+        $('.navbar-minimalize').click(function () {
+            if( $('body').hasClass('mini-navbar') )
+            {
+                document.getElementById("siteLogo").src = hdr_full_logo;
+            }
+            else
+            {
+                document.getElementById("siteLogo").src = hdr_mini_logo;
+            }
+        });
+    });
+
+</script>
+
+#if ($theme_settings.pages-icon=="Default")
+	<script type="text/javascript">		
+		$( document ).ready(function() {
+			$('.icon-item1').addClass('fa fa-th-large');
+			$('.icon-item2').addClass('fa fa-star-o');
+			$('.icon-item3').addClass('fa fa-bar-chart-o');
+			$('.icon-item4').addClass('fa fa-envelope');
+			$('.icon-item5').addClass('fa fa-flask');
+			$('.icon-item6').addClass('fa fa-edit');
+			$('.icon-item7').addClass('fa fa-desktop');
+			$('.icon-item8').addClass('fa fa-files-o');
+			$('.icon-item9').addClass('fa fa-globe');
+			$('.icon-item10').addClass('fa fa-flask');		
+			$('.icon-item11').addClass('fa fa-laptop');		
+			$('.icon-item12').addClass('fa fa-table');		
+			$('.icon-item13').addClass('fa fa-picture-o');		
+			$('.icon-item14').addClass('fa fa-sitemap');		
+			$('.icon-item15').addClass('fa fa-magic');		
+			$('.icon-item16').addClass('fa fa-star');			
+			$('.icon-item17').addClass('fa fa-code');	
+			$('.item16').addClass('landing_link');	
+			
+				
+		});
+	</script>	
+#end
